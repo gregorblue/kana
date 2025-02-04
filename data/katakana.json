@@ -1,0 +1,452 @@
+{
+    "ア": {
+        "phonetic": "a",
+        "audio": "a.mp3"
+    },
+    "イ": {
+        "phonetic": "i",
+        "audio": "i.mp3"
+    },
+    "ウ": {
+        "phonetic": "u",
+        "audio": "u.mp3"
+    },
+    "エ": {
+        "phonetic": "e",
+        "audio": "e.mp3"
+    },
+    "オ": {
+        "phonetic": "o",
+        "audio": "o.mp3"
+    },
+    "カ": {
+        "phonetic": "ka",
+        "audio": "ka.mp3"
+    },
+    "キ": {
+        "phonetic": "ki",
+        "audio": "ki.mp3"
+    },
+    "ク": {
+        "phonetic": "ku",
+        "audio": "ku.mp3"
+    },
+    "ケ": {
+        "phonetic": "ke",
+        "audio": "ke.mp3"
+    },
+    "コ": {
+        "phonetic": "ko",
+        "audio": "ko.mp3"
+    },
+    "ガ": {
+        "phonetic": "ga",
+        "audio": "ga.mp3"
+    },
+    "ギ": {
+        "phonetic": "gi",
+        "audio": "gi.mp3"
+    },
+    "グ": {
+        "phonetic": "gu",
+        "audio": "gu.mp3"
+    },
+    "ゲ": {
+        "phonetic": "ge",
+        "audio": "ge.mp3"
+    },
+    "ゴ": {
+        "phonetic": "go",
+        "audio": "go.mp3"
+    },
+    "サ": {
+        "phonetic": "sa",
+        "audio": "sa.mp3"
+    },
+    "シ": {
+        "phonetic": "shi",
+        "audio": "shi.mp3"
+    },
+    "ス": {
+        "phonetic": "su",
+        "audio": "su.mp3"
+    },
+    "セ": {
+        "phonetic": "se",
+        "audio": "se.mp3"
+    },
+    "ソ": {
+        "phonetic": "so",
+        "audio": "so.mp3"
+    },
+    "ザ": {
+        "phonetic": "za",
+        "audio": "za.mp3"
+    },
+    "ジ": {
+        "phonetic": "ji",
+        "audio": "ji.mp3"
+    },
+    "ズ": {
+        "phonetic": "zu",
+        "audio": "zu.mp3"
+    },
+    "ゼ": {
+        "phonetic": "ze",
+        "audio": "ze.mp3"
+    },
+    "ゾ": {
+        "phonetic": "zo",
+        "audio": "zo.mp3"
+    },
+    "タ": {
+        "phonetic": "ta",
+        "audio": "ta.mp3"
+    },
+    "チ": {
+        "phonetic": "chi",
+        "audio": "chi.mp3"
+    },
+    "ツ": {
+        "phonetic": "tsu",
+        "audio": "tsu.mp3"
+    },
+    "テ": {
+        "phonetic": "te",
+        "audio": "te.mp3"
+    },
+    "ト": {
+        "phonetic": "to",
+        "audio": "to.mp3"
+    },
+    "ダ": {
+        "phonetic": "da",
+        "audio": "da.mp3"
+    },
+    "ヂ": {
+        "phonetic": "ji",
+        "audio": "ji.mp3"
+    },
+    "ヅ": {
+        "phonetic": "zu",
+        "audio": "zu.mp3"
+    },
+    "デ": {
+        "phonetic": "de",
+        "audio": "de.mp3"
+    },
+    "ド": {
+        "phonetic": "do",
+        "audio": "do.mp3"
+    },
+    "ナ": {
+        "phonetic": "na",
+        "audio": "na.mp3"
+    },
+    "ニ": {
+        "phonetic": "ni",
+        "audio": "ni.mp3"
+    },
+    "ヌ": {
+        "phonetic": "nu",
+        "audio": "nu.mp3"
+    },
+    "ネ": {
+        "phonetic": "ne",
+        "audio": "ne.mp3"
+    },
+    "ノ": {
+        "phonetic": "no",
+        "audio": "no.mp3"
+    },
+    "ハ": {
+        "phonetic": "ha",
+        "audio": "ha.mp3"
+    },
+    "ヒ": {
+        "phonetic": "hi",
+        "audio": "hi.mp3"
+    },
+    "フ": {
+        "phonetic": "fu",
+        "audio": "fu.mp3"
+    },
+    "ヘ": {
+        "phonetic": "he",
+        "audio": "he.mp3"
+    },
+    "ホ": {
+        "phonetic": "ho",
+        "audio": "ho.mp3"
+    },
+    "バ": {
+        "phonetic": "ba",
+        "audio": "ba.mp3"
+    },
+    "ビ": {
+        "phonetic": "bi",
+        "audio": "bi.mp3"
+    },
+    "ブ": {
+        "phonetic": "bu",
+        "audio": "bu.mp3"
+    },
+    "ベ": {
+        "phonetic": "be",
+        "audio": "be.mp3"
+    },
+    "ボ": {
+        "phonetic": "bo",
+        "audio": "bo.mp3"
+    },
+    "パ": {
+        "phonetic": "pa",
+        "audio": "pa.mp3"
+    },
+    "ピ": {
+        "phonetic": "pi",
+        "audio": "pi.mp3"
+    },
+    "プ": {
+        "phonetic": "pu",
+        "audio": "pu.mp3"
+    },
+    "ペ": {
+        "phonetic": "pe",
+        "audio": "pe.mp3"
+    },
+    "ポ": {
+        "phonetic": "po",
+        "audio": "po.mp3"
+    },
+    "マ": {
+        "phonetic": "ma",
+        "audio": "ma.mp3"
+    },
+    "ミ": {
+        "phonetic": "mi",
+        "audio": "mi.mp3"
+    },
+    "ム": {
+        "phonetic": "mu",
+        "audio": "mu.mp3"
+    },
+    "メ": {
+        "phonetic": "me",
+        "audio": "me.mp3"
+    },
+    "モ": {
+        "phonetic": "mo",
+        "audio": "mo.mp3"
+    },
+    "ヤ": {
+        "phonetic": "ya",
+        "audio": "ya.mp3"
+    },
+    "ユ": {
+        "phonetic": "yu",
+        "audio": "yu.mp3"
+    },
+    "ヨ": {
+        "phonetic": "yo",
+        "audio": "yo.mp3"
+    },
+    "ラ": {
+        "phonetic": "ra",
+        "audio": "ra.mp3"
+    },
+    "リ": {
+        "phonetic": "ri",
+        "audio": "ri.mp3"
+    },
+    "ル": {
+        "phonetic": "ru",
+        "audio": "ru.mp3"
+    },
+    "レ": {
+        "phonetic": "re",
+        "audio": "re.mp3"
+    },
+    "ロ": {
+        "phonetic": "ro",
+        "audio": "ro.mp3"
+    },
+    "ワ": {
+        "phonetic": "wa",
+        "audio": "wa.mp3"
+    },
+    "ヲ": {
+        "phonetic": "wo",
+        "audio": "wo.mp3"
+    },
+    "ン": {
+        "phonetic": "n/m",
+        "audio": "n.mp3"
+    },
+
+    "キャ": {
+        "phonetic": "kya",
+        "audio": "kya.mp3",
+        "combination": true
+    },
+    "キュ": {
+        "phonetic": "kyu",
+        "audio": "kyu.mp3",
+        "combination": true
+    },
+    "キョ": {
+        "phonetic": "kyo",
+        "audio": "kyo.mp3",
+        "combination": true
+    },
+    "ギャ": {
+        "phonetic": "gya",
+        "audio": "gya.mp3",
+        "combination": true
+    },
+    "ギュ": {
+        "phonetic": "gyu",
+        "audio": "gyu.mp3",
+        "combination": true
+    },
+    "ギョ": {
+        "phonetic": "gyo",
+        "audio": "gyo.mp3",
+        "combination": true
+    },
+    "シャ": {
+        "phonetic": "sha",
+        "audio": "sha.mp3",
+        "combination": true
+    },
+    "シュ": {
+        "phonetic": "shu",
+        "audio": "shu.mp3",
+        "combination": true
+    },
+    "ショ": {
+        "phonetic": "sho",
+        "audio": "sho.mp3",
+        "combination": true
+    },
+    "ジャ": {
+        "phonetic": "ja",
+        "audio": "ja.mp3",
+        "combination": true
+    },
+    "ジュ": {
+        "phonetic": "ju",
+        "audio": "ju.mp3",
+        "combination": true
+    },
+    "ジョ": {
+        "phonetic": "jo",
+        "audio": "jo.mp3",
+        "combination": true
+    },
+    "チャ": {
+        "phonetic": "cha",
+        "audio": "cha.mp3",
+        "combination": true
+    },
+    "チュ": {
+        "phonetic": "chu",
+        "audio": "chu.mp3",
+        "combination": true
+    },
+    "チョ": {
+        "phonetic": "cho",
+        "audio": "cho.mp3",
+        "combination": true
+    },
+    "ニャ": {
+        "phonetic": "nya",
+        "audio": "nya.mp3",
+        "combination": true
+    },
+    "ニュ": {
+        "phonetic": "nyu",
+        "audio": "nyu.mp3",
+        "combination": true
+    },
+    "ニョ": {
+        "phonetic": "nyo",
+        "audio": "nyo.mp3",
+        "combination": true
+    },
+    "ヒャ": {
+        "phonetic": "hya",
+        "audio": "hya.mp3",
+        "combination": true
+    },
+    "ヒュ": {
+        "phonetic": "hyu",
+        "audio": "hyu.mp3",
+        "combination": true
+    },
+    "ヒョ": {
+        "phonetic": "hyo",
+        "audio": "hyo.mp3",
+        "combination": true
+    },
+    "ビャ": {
+        "phonetic": "bya",
+        "audio": "bya.mp3",
+        "combination": true
+    },
+    "ビュ": {
+        "phonetic": "byu",
+        "audio": "byu.mp3",
+        "combination": true
+    },
+    "ビョ": {
+        "phonetic": "byo",
+        "audio": "byo.mp3",
+        "combination": true
+    },
+    "ピャ": {
+        "phonetic": "pya",
+        "audio": "pya.mp3",
+        "combination": true
+    },
+    "ピュ": {
+        "phonetic": "pyu",
+        "audio": "pyu.mp3",
+        "combination": true
+    },
+    "ピョ": {
+        "phonetic": "pyo",
+        "audio": "pyo.mp3",
+        "combination": true
+    },
+    "ミャ": {
+        "phonetic": "mya",
+        "audio": "mya.mp3",
+        "combination": true
+    },
+    "ミュ": {
+        "phonetic": "myu",
+        "audio": "myu.mp3",
+        "combination": true
+    },
+    "ミョ": {
+        "phonetic": "myo",
+        "audio": "myo.mp3",
+        "combination": true
+    },
+    "リャ": {
+        "phonetic": "rya",
+        "audio": "rya.mp3",
+        "combination": true
+    },
+    "リュ": {
+        "phonetic": "ryu",
+        "audio": "ryu.mp3",
+        "combination": true
+    },
+    "リョ": {
+        "phonetic": "ryo",
+        "audio": "ryo.mp3",
+        "combination": true
+    }
+}
