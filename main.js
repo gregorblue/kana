@@ -42,22 +42,30 @@ let settings = {
 document.querySelector('.settings #hiragana').addEventListener('change', function(e) {
     e.preventDefault();
     settings.hiragana = !settings.hiragana;
-    refreshSettings(true);
+    availableChars = generateCharset();
+    if (!currentChar || (!settings.hiragana && currentChar.type === 'hiragana' && !currentChar.combination)) chooseRandomChar();
+    refreshSettings();
 });
 document.querySelector('.settings #hiraganaCombinations').addEventListener('change', function(e) {
     e.preventDefault();
     settings.hiraganaCombinations = !settings.hiraganaCombinations;
-    refreshSettings(true);
+    availableChars = generateCharset();
+    if (!currentChar || (!settings.hiraganaCombinations && currentChar.type === 'hiragana' && currentChar.combination)) chooseRandomChar();
+    refreshSettings();
 });
 document.querySelector('.settings #katakana').addEventListener('change', function(e) {
     e.preventDefault();
     settings.katakana = !settings.katakana;
-    refreshSettings(true);
+    availableChars = generateCharset();
+    if (!currentChar || (!settings.katakana && currentChar.type === 'katakana' && !currentChar.combination)) chooseRandomChar();
+    refreshSettings();
 });
 document.querySelector('.settings #katakanaCombinations').addEventListener('change', function(e) {
     e.preventDefault();
     settings.katakanaCombinations = !settings.katakanaCombinations;
-    refreshSettings(true);
+    availableChars = generateCharset();
+    if (!currentChar || (!settings.katakanaCombinations && currentChar.type === 'katakana' && currentChar.combination)) chooseRandomChar();
+    refreshSettings();
 });
 
 document.querySelector('.settings input#playbackRate').addEventListener('input', function(e) {
@@ -66,7 +74,7 @@ document.querySelector('.settings input#playbackRate').addEventListener('input',
     refreshSettings();
 });
 
-function refreshSettings(refreshChar) {
+function refreshSettings() {
     document.querySelector('.settings #hiragana').checked = settings.hiragana;
     document.querySelector('.settings #hiraganaCombinations').checked = settings.hiraganaCombinations;
     document.querySelector('.settings #katakana').checked = settings.katakana;
@@ -74,14 +82,6 @@ function refreshSettings(refreshChar) {
     
     document.querySelector('.settings a#playbackRate').innerText = settings.playbackRate;
     document.querySelector('.settings input#playbackRate').value = settings.playbackRate;
-
-    if (refreshChar) {
-        // Refresh list
-        availableChars = generateCharset();
-    
-        // Set current char
-        chooseRandomChar();
-    }
 }
 
 let hiraganaCharset;
@@ -146,7 +146,13 @@ async function init() {
         .then((response) => response.json())
         .then((json) => katakanaCharset = json);
 
-    refreshSettings(true);
+    refreshSettings();
+    
+    // Refresh list
+    availableChars = generateCharset();
+    
+    // Set current char
+    chooseRandomChar();
 }
 
 init();
