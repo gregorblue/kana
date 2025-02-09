@@ -14,6 +14,10 @@ body {
     background-color: #e3e3e3;
 }
 
+.link {
+    color: #e3e3e3;
+}
+
 ::-webkit-scrollbar {
     width: 0.4rem;
     height: 0.3rem;
@@ -44,6 +48,7 @@ body {
 }
 
 #header {
+    z-index: 5;
     width: 95%;
     display: flex;
     height: 7.5vh;
@@ -262,6 +267,89 @@ body {
     left: 7.5rem;
 }
 
+.iconButton#settings {
+    position: absolute;
+}
+
+.settingsWrapper {
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.settings {
+    height: 50%;
+    margin: 1rem;
+    min-width: 30%; 
+    padding: 2.75rem;
+    border-radius: 2.5vh;
+    backdrop-filter: blur(.75rem);
+    -webkit-backdrop-filter: blur(.75rem);
+    background: rgba(150, 150, 150, 0.35);
+    filter: drop-shadow(black 0px 0px 0.4rem);
+    box-shadow: rgb(0 0 0) 0px 0px 0.25vh inset;
+}
+
+.settings .checkbox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.settings .checkbox input {
+    color: rgb(227, 227, 227);
+    box-shadow: rgb(0 0 0) 0px 0px 1vh inset;
+    padding: 1.25vh;
+    border: none;
+    outline: none;
+    background: rgb(58, 58, 58);
+}
+
+.settings .checkbox input:checked {
+    background: #89cff0;
+}
+
+.slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 85%;
+    height: 1.5rem;
+    background: #64646480;
+    backdrop-filter: blur(0.5vw);
+    outline: #e3e3e3 solid 0.1vw;
+    box-shadow: rgb(0 0 0) 0px 0px 0.75vh inset;
+}
+
+.slider input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    background: #e3e3e3;
+}
+
+.slider input::-moz-range-thumb {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    background: #e3e3e3;
+}
+
+/* CSS that should be displayed if width is equal to or less than 800px goes here */
 @media (max-width: 800px) {
     .errorLog {
         height: 10rem;
@@ -270,5 +358,8 @@ body {
         top: unset;
         left: unset;
     }
-    /* CSS that should be displayed if width is equal to or less than 800px goes here */
+
+    .settings {
+        min-width: 70%;
+    }
 }

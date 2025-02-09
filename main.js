@@ -1,5 +1,6 @@
 document.querySelector('#header .brand').addEventListener('click', (e) => window.open('https://nfzxm.uk', '_self'));
 
+const settingWrapper = document.querySelector('.settingsWrapper')
 const charElem = document.querySelector('#symbol');
 const inputElem = document.querySelector('.text');
 
@@ -17,17 +18,70 @@ inputElem.addEventListener('keyup', function(event) {if (event.keyCode === 13) s
 document.querySelector('.iconButton#speak').addEventListener('click', function() {
     if (currentChar && currentChar.audio) {
         const audio = new Audio(`./assets/audio/${currentChar.type}/${currentChar.audio}`);
+        audio.playbackRate = settings.playbackRate;
         audio.play();
     }
 });
 document.querySelector('.iconButton#skip').addEventListener('click', chooseRandomChar);
+document.querySelector('.iconButton#settings').addEventListener('click', function() {
+    settingWrapper.style.display = 'flex';
+});
 
+settingWrapper.addEventListener('click', function(e) {
+    if (e.target.className.includes('settingsWrapper') || e.target.id === 'settingsClose') settingWrapper.style.display = 'none';
+});
 
 let settings = {
     hiragana: true,
     hiraganaCombinations: true,
     katakana: true,
-    katakanaCombinations: true
+    katakanaCombinations: true,
+    playbackRate: 1.0
+}
+
+document.querySelector('.settings #hiragana').addEventListener('change', function(e) {
+    e.preventDefault();
+    settings.hiragana = !settings.hiragana;
+    refreshSettings(true);
+});
+document.querySelector('.settings #hiraganaCombinations').addEventListener('change', function(e) {
+    e.preventDefault();
+    settings.hiraganaCombinations = !settings.hiraganaCombinations;
+    refreshSettings(true);
+});
+document.querySelector('.settings #katakana').addEventListener('change', function(e) {
+    e.preventDefault();
+    settings.katakana = !settings.katakana;
+    refreshSettings(true);
+});
+document.querySelector('.settings #katakanaCombinations').addEventListener('change', function(e) {
+    e.preventDefault();
+    settings.katakanaCombinations = !settings.katakanaCombinations;
+    refreshSettings(true);
+});
+
+document.querySelector('.settings input#playbackRate').addEventListener('input', function(e) {
+    e.preventDefault();
+    settings.playbackRate = e.target.value;
+    refreshSettings();
+});
+
+function refreshSettings(refreshChar) {
+    document.querySelector('.settings #hiragana').checked = settings.hiragana;
+    document.querySelector('.settings #hiraganaCombinations').checked = settings.hiraganaCombinations;
+    document.querySelector('.settings #katakana').checked = settings.katakana;
+    document.querySelector('.settings #katakanaCombinations').checked = settings.katakanaCombinations;
+    
+    document.querySelector('.settings a#playbackRate').innerText = settings.playbackRate;
+    document.querySelector('.settings input#playbackRate').value = settings.playbackRate;
+
+    if (refreshChar) {
+        // Refresh list
+        availableChars = generateCharset();
+    
+        // Set current char
+        chooseRandomChar();
+    }
 }
 
 let hiraganaCharset;
@@ -45,18 +99,18 @@ function errorEntry(text) {
 
 function generateCharset() {
     let ret = [];
-    if (settings.hiragana) {
+    if (settings.hiragana || settings.hiraganaCombinations) {
         Object.entries(hiraganaCharset).forEach(([symbol, info]) => {
-            if (!info.combination || settings.hiraganaCombinations) {
+            if ((!info.combination && settings.hiragana) || (info.combination && settings.hiraganaCombinations)) {
                 info.symbol = symbol;
                 info.type = 'hiragana';
                 ret.push(info);
             }
         });
     }
-    if (settings.katakana) {
+    if (settings.katakana || settings.katakanaCombinations) {
         Object.entries(katakanaCharset).forEach(([symbol, info]) => {
-            if (!info.combination || settings.katakanaCombinations) {
+            if ((!info.combination && settings.katakana) || (info.combination && settings.katakanaCombinations)) {
                 info.symbol = symbol;
                 info.type = 'katakana';
                 ret.push(info);
@@ -76,8 +130,11 @@ function chooseRandomChar() {
         availableChars.splice(index, 1);
         currentChar = char;
         charElem.innerText = char.symbol;
-        inputElem.value = null;
+    } else {
+        currentChar = null;
+        charElem.innerText = null;
     }
+    inputElem.value = null;
 }
 
 async function init() {
@@ -89,11 +146,7 @@ async function init() {
         .then((response) => response.json())
         .then((json) => katakanaCharset = json);
 
-    // Refresh list
-    availableChars = generateCharset();
-
-    // Set current char
-    chooseRandomChar();
+    refreshSettings(true);
 }
 
 init();
