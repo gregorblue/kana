@@ -15,9 +15,9 @@
         <link rel="manifest" href="assets/favicon/site.webmanifest">
         <!-- Style + Script -->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css"/>
-        <link href="style.css" rel="stylesheet"/>
+        <link href="style.css?v=0.0.3-a3" rel="stylesheet"/>
         <!-- Title -->
-        <title>Nfzxm</title>
+        <title>Kana | Nfzxm</title>
     </head>
     <body>
         <div id="header">
@@ -39,8 +39,8 @@
                     <div class="symbol">
                         <a id="symbol"></a>
                     </div>
-                    <div class="input">
-                        <input class="text" placeholder="Phonetic">
+                    <div class="input"></div>
+                    <div class="buttons">
                         <div class="iconButton" id="enter">
                             <i class="fad fa-check-circle"></i>
                         </div>
@@ -83,9 +83,16 @@
                             <input type="range" min="0.25" step="0.25" max="1" value="1" id="playbackRate">
                         </div>
                     </div>
+                    <div class="checkbox">
+                        <label for="input">Input Mode:</label> 
+                        <select name="input" id="input" value="select">
+                            <option value="select" selected>Select</option>
+                            <option value="text">Text</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
     </body>
-    <script src="main.js?v=0.0.2-a"></script>
+    <script src="main.js?v=0.0.3-a3"></script>
 </html>
